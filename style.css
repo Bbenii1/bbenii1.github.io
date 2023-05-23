@@ -78,7 +78,7 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
 }
 
 .nav a {
-  padding: 0;
+  padding: .5em .8em;
   color: white;
   position: relative;
   text-decoration: none;
