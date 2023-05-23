@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cairo');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 
 body {
   background-color: #1a1a1a;
@@ -35,14 +36,12 @@ h1 {
   font-size: 120px;
   margin: 0px 0;
 }
+
 /*
 https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif
 https://images.squarespace-cdn.com/content/v1/5a9b5ce89f87708f9ed85aa4/1521091607294-Q7BCOMTX87IYXWDRRP0R/Footer-gradient.gif?format=2500w
 https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
 */
-
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
-
 
 .nav {
   font-family: 'Cairo';
@@ -55,12 +54,12 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
   grid-gap: 1rem;
   padding: 0;
 }
-/* Screen larger than 600px? 2 column */
+
 @media (min-width: 600px) {
   .nav { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Screen larger than 900px? 3 columns */
+
 @media (min-width: 900px) {
   .nav { grid-template-columns: repeat(5, 1fr); }
 }
@@ -120,13 +119,15 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
 }
 
 .nav a:hover {
-  /*background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif);
+  /*alternatív "betűszín"
+  background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif);
   background-size: cover;
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;*/
   color: lightgray;
 }
+
 .cpyrght {
   text-align: center;
   font-family: 'Cairo';
