@@ -126,7 +126,7 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
   background-size: 400%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: txt-animation infinite 30s;
+  animation: txt-animation infinite 25s;
   color: lightgray;
 }
 
