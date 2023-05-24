@@ -11,6 +11,8 @@ body {
   font-weight: 300;
   text-rendering: optimizeLegibility;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .text {
@@ -119,12 +121,12 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
 }
 
 .nav a:hover {
-  /*alternatív "betűszín"
-  background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif);
-  background-size: cover;
-  color: transparent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;*/
+  width: 100px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%,#9f5cf8), color-stop(20%,#d65db1), color-stop(30%,#ff6f91), color-stop(40%,#ff9671), color-stop(50%,#ffc75f), color-stop(60%,#f9d571), color-stop(70%,#ffc75f), color-stop(80%,#ff9671), color-stop(87%,#ff6f91), color-stop(93%,#d65db1), color-stop(100%,#9f5cf8));
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: txt-animation infinite 30s;
   color: lightgray;
 }
 
@@ -133,4 +135,13 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
   font-family: 'Cairo';
   text-transform: capitalize;
   font-size: 10pt;
+}
+
+@keyframes txt-animation {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
 }
