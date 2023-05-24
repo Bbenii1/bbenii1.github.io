@@ -130,13 +130,6 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
   color: lightgray;
 }
 
-.cpyrght {
-  text-align: center;
-  font-family: 'Cairo';
-  text-transform: capitalize;
-  font-size: 10pt;
-}
-
 @keyframes txt-animation {
   0%{
     background-position: 0%;
@@ -144,4 +137,11 @@ https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif
   100%{
     background-position: 400%;
   }
+}
+
+.cpyrght {
+  text-align: center;
+  font-family: 'Cairo';
+  text-transform: capitalize;
+  font-size: 10pt;
 }
