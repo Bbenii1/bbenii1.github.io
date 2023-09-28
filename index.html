@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images\favicon.png">
 </head>
 <body>
+  <div id="blob"></div>
+<div id="blur"></div>
     <div class="text">
         <h2>Hey, i'm</h2>
         <h1 data-value="BENII1">BENII1</h1>
@@ -52,6 +54,18 @@
         iteration += 1 / 3;
       }, 50);
     }
+
+
+  const blob = document.getElementById("blob");
+  window.onpointermove = event => { 
+  const { clientX, clientY } = event;
+  
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY}px`
+  }, { duration: 3000, fill: "forwards" });
+}
+
     </script>
 </body>
 </html>

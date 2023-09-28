@@ -8,7 +8,9 @@ body {
   font-size: 1.3em;
   text-align: center;
   padding: 0;
-  margin: 0;
+  height: 100vh;
+  margin: 0rem;
+  overflow: hidden;
 }
 
 .text {
@@ -33,6 +35,7 @@ h1 {
   height: 200px;
   margin-bottom: 10vh;
   padding: 0;
+  z-index: 3;
 }
 h2 {
   font-family: "cairo";
@@ -43,6 +46,7 @@ h2 {
   margin: 0;
   padding: 0;
   height: 60px;
+  z-index: 3;
 }
 
 .nav {
@@ -55,16 +59,19 @@ h2 {
   display: grid;
   grid-gap: 1rem;
   padding: 0;
+  z-index: 3;
 }
 
 @media (min-width: 600px) {
   .nav { grid-template-columns: repeat(3, 1fr); }
-}
-
+  }
 
 @media (min-width: 900px) {
   .nav { grid-template-columns: repeat(5, 1fr); }
 }
+@media (max-width: 900px) {
+  #blob {display: none;}
+  }
 
 .nav * {
   box-sizing: border-box;
@@ -87,17 +94,51 @@ h2 {
   user-select: none;
 }
 
-a:hover{
-  background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif);
-  color: transparent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-}
-
 .cpyrght {
   text-align: center;
   font-family: 'Cairo';
   text-transform: capitalize;
   font-size: 10pt;
   user-select: none;
+  z-index: 5;
+  position: absolute;
+ 
+  width: 100%;
 } 
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  height: 20vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(201, 76, 201), rgb(255, 180, 42));
+  animation: rotate 20s infinite;
+  opacity: 1;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  backdrop-filter: blur(10vmax);
+}
