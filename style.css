@@ -37,9 +37,11 @@ h1 {
   margin-bottom: 10vh;
   padding: 0;
   z-index: 3;
+  display: flex;
+  height: 150px;
 }
 h2 {
-  font-family: "cairo";
+  font-family: 'Space Mono', monospace;
   color: white;
   background-size: cover;
   text-transform: uppercase;
@@ -51,7 +53,7 @@ h2 {
 }
 
 .nav {
-  font-family: 'Cairo';
+  font-family: 'Space Mono', monospace;
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
@@ -72,8 +74,10 @@ h2 {
 }
 @media (max-width: 900px) {
   #blob {display: none;}
-  }
-  h1{font-size: 100px; margin: 0;}
+  h1{font-size: 80px; margin: 0;}
+  .nav {margin: 0;}
+}
+  
 
 .nav * {
   box-sizing: border-box;
@@ -98,7 +102,7 @@ h2 {
 
 .cpyrght {
   text-align: center;
-  font-family: 'Cairo';
+  font-family: 'Space Mono', monospace;
   text-transform: capitalize;
   font-size: 10pt;
   user-select: none;
