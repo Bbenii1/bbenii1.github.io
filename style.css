@@ -11,6 +11,7 @@ body {
   height: 100vh;
   margin: 0rem;
   overflow: hidden;
+  font-family: 'Space Mono', monospace;
 }
 
 .text {
@@ -24,7 +25,7 @@ body {
 } 
 
 h1 {
-  font-family: "cairo";
+  font-family: 'Space Mono', monospace;
   background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif);
   color: transparent;
   -moz-background-clip: text;
