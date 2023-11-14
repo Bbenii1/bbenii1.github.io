@@ -148,3 +148,15 @@ h2 {
   z-index: 0;
   backdrop-filter: blur(10vmax);
 }
+
+.new {
+  color: white;
+  z-index: 10;
+  text-decoration: underline;
+  margin-top: 7.5rem;
+  position: inherit;
+}
+.bold {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
