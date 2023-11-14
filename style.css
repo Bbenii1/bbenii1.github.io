@@ -151,10 +151,10 @@ h2 {
 
 .new {
   color: white;
-  z-index: 10;
+  z-index: 100;
   text-decoration: underline;
-  margin-top: 7.5rem;
-  position: inherit;
+  margin-top: 8rem;
+  margin-bottom: -6rem;
 }
 .bold {
   font-size: 1.75rem;
