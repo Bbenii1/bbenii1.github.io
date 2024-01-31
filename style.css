@@ -86,7 +86,8 @@ h2 {
 }
 @media (max-width: 900px) {
   #blob {display: none;}
-  h1{margin-bottom: 10vh; font-size: 80px;}
+  h1{margin-bottom: 10vh; font-size: 90px;}
+  h2{font-size: 30px;}
   .nav {margin: 0;}
 }
 
