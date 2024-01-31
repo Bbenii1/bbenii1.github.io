@@ -87,7 +87,7 @@ h2 {
 }
 @media (max-width: 900px) {
   /* #blob {display: none;} */
-  h1{margin-bottom: 10vh; font-size: 90px; width: 215px; height: 70px; line-height: 70px;}
+  h1{margin-bottom: 10vh; font-size: 90px; width: 220px; height: 70px; line-height: 70px;}
   h2{font-size: 30px;}
   .nav {margin: 0; grid-gap: 3rem;}
   .text{margin-top: -3vh;}
