@@ -85,10 +85,10 @@ h2 {
   .nav { grid-template-columns: repeat(3, 1fr);}
 }
 @media (max-width: 900px) {
-  #blob {display: none;}
+  /* #blob {display: none;} */
   h1{margin-bottom: 10vh; font-size: 90px;}
-  h2{font-size: 30px;}
-  .nav {margin: 0;}
+  h2{font-size: 30px; margin-top: -5vh;}
+  .nav {margin: 0; grid-gap: 3rem;}
 }
 
 .nav * {
