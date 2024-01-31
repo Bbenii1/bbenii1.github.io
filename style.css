@@ -89,6 +89,7 @@ h2 {
   h1{margin-bottom: 10vh; font-size: 90px;}
   h2{font-size: 30px;}
   .nav {margin: 0; grid-gap: 3rem;}
+  .text{height: 100vh;}
 }
 
 .nav * {
