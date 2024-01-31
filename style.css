@@ -82,11 +82,11 @@ h2 {
 }
 
 @media (min-width: 900px) {
-  .nav { grid-template-columns: repeat(3, 1fr); }
+  .nav { grid-template-columns: repeat(3, 1fr);}
 }
 @media (max-width: 900px) {
   #blob {display: none;}
-  h1{margin-bottom: 10vh;}
+  h1{margin-bottom: 10vh; font-size: 100px;}
   .nav {margin: 0;}
 }
 
