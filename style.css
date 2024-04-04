@@ -8,9 +8,9 @@ body {
   padding: 0;
   height: 100vh;
   margin: 0rem;
-  overflow: hidden;
   font-family: 'Space Mono', monospace;
   position: relative;
+  overflow: visible;
 }
 
 .text {
@@ -19,13 +19,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 140vh;
   user-select: none;
 } 
 
 h1 {
   /* background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif); */
-  font-size: 120px;
+  font-size: 7rem;
   margin: 0;
   margin-top: 10px;
   margin-bottom: 10vh;
@@ -81,13 +81,51 @@ h2 {
   padding: 0;
   z-index: 3;
 }
-
+hr {
+  width: 70vw;
+  margin: 10vh auto 10vh auto;
+}
+#aboutme {
+  width: 60%;
+  display: block;
+  text-align: center;
+}
+#aboutmetext {
+  text-align: center;
+  font-size: .75rem;
+  letter-spacing: normal;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.knowledge{
+  text-align: center;
+}
+.skill {
+  font-size: 24px;
+  list-style-type: none;
+  color: #c3073f;
+  font-size: 2rem;
+}
 @media (min-width: 900px) {
   .nav { grid-template-columns: repeat(3, 1fr);}
+  #aboutme{
+    width:80%;
+  }
 }
 @media (max-width: 900px) {
   /* #blob {display: none;} */
-  h1{margin-bottom: 10vh; font-size: 90px; height: 70px; line-height: 70px;}
+  body{
+    margin-top: 12.5vh;
+    overflow: visible;
+  }
+  #aboutme{
+    width: 80%;
+  }
+  h1{
+    margin-bottom: 10vh;
+    font-size: 90px; height: 70px;
+    line-height: 70px;
+  }
   h2{font-size: 30px;}
   .nav {margin: 0; grid-gap: 3rem;}
   .text{margin-top: -3vh;}
@@ -114,50 +152,22 @@ h2 {
   user-select: none;
 }
 li:nth-child(1) {
-  animation: showup 4s;
+  animation: showup 3s;
 }
 li:nth-child(2) {
-  animation: showup 5s;
+  animation: showup 4s;
 }
 li:nth-child(3) {
+  animation: showup 5s;
+}
+li:nth-child(4) {
   animation: showup 6s;
 }
+li:nth-child(5) {
+  animation: showup 7s;
+}
+
 @keyframes showup {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-
-/* @keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  
-  50% {
-    scale: 1 1.5;
-  }
-  
-  to {
-    rotate: 360deg;
-  }
-}
-#blob {
-  height: 20vmax;
-  aspect-ratio: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient(to right, rgb(201, 76, 201), rgb(255, 180, 42));
-  animation: rotate 20s infinite;
-  opacity: 1;
-  z-index: -1;
-  overflow: hidden;
-}
-#blur {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  backdrop-filter: blur(10vmax);
-} */
