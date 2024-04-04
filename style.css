@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 140vh;
+  height: 150vh;
   user-select: none;
 } 
 
@@ -101,10 +101,9 @@ hr {
   text-align: center;
 }
 .skill {
-  font-size: 24px;
+  font-size: 1.5rem;
   list-style-type: none;
   color: #c3073f;
-  font-size: 2rem;
 }
 @media (min-width: 900px) {
   .nav { grid-template-columns: repeat(3, 1fr);}
