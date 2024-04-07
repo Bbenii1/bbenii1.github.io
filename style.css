@@ -8,7 +8,8 @@ body {
   padding: 0;
   height: 100vh;
   margin: 0rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
+  /* font-family: 'Space Mono', monospace; */
   position: relative;
   overflow: visible;
 }
@@ -24,7 +25,6 @@ body {
 } 
 
 h1 {
-  /* background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif); */
   font-size: 7rem;
   margin: 0;
   margin-top: 10px;
@@ -34,13 +34,13 @@ h1 {
   height: 85px;
   line-height: 85px;
   width: 280px;
-  animation: showup 3.5s, textclip 3s linear infinite;
+  animation: showup 2s, textclip 3s linear infinite;
   font-weight: bold;
   background-image: linear-gradient(
     90deg,
     #6f2232 0%,
     #950740 25%,
-    #c3073f 50%,
+    rgb(195, 7, 63) 50%,
     #950740 75%,
     #6f2232 100%
   );
@@ -50,11 +50,6 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
 }
 
 h2 {
@@ -81,58 +76,11 @@ h2 {
   padding: 0;
   z-index: 3;
 }
-hr {
-  width: 70vw;
-  margin: 10vh auto 10vh auto;
-}
-#aboutme {
-  width: 60%;
-  display: block;
-  text-align: center;
-}
-#aboutmetext {
-  text-align: center;
-  font-size: .75rem;
-  letter-spacing: normal;
-  margin-left: 10vw;
-  margin-right: 10vw;
-}
-.knowledge{
-  text-align: center;
-}
-.skill {
-  font-size: 1.5rem;
-  list-style-type: none;
-  color: #c3073f;
-}
-@media (min-width: 900px) {
-  .nav { grid-template-columns: repeat(3, 1fr);}
-  #aboutme{
-    width:80%;
-  }
-}
-@media (max-width: 900px) {
-  /* #blob {display: none;} */
-  body{
-    margin-top: 12.5vh;
-    overflow: visible;
-  }
-  #aboutme{
-    width: 80%;
-  }
-  h1{
-    margin-bottom: 10vh;
-    font-size: 90px; height: 70px;
-    line-height: 70px;
-  }
-  h2{font-size: 30px;}
-  .nav {margin: 0; grid-gap: 3rem;}
-  .text{margin-top: -3vh;}
-}
 
 .nav * {
   box-sizing: border-box;
   transition: all .35s ease;
+  animation: showup 2s;
 }
 
 .nav li {
@@ -149,24 +97,80 @@ hr {
   text-decoration: none;
   font-size: 20px;
   user-select: none;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  -ms-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s;
 }
-li:nth-child(1) {
-  animation: showup 3s;
+
+.nav a:hover{
+  color: rgb(195, 7, 63);
 }
-li:nth-child(2) {
-  animation: showup 4s;
+
+hr {
+  width: 70vw;
+  margin: 10vh auto 10vh auto;
+  animation: showup 2s;
 }
-li:nth-child(3) {
-  animation: showup 5s;
+
+#aboutme {
+  width: 60%;
+  display: block;
+  text-align: center;
+  animation: showup 2s;
 }
-li:nth-child(4) {
-  animation: showup 6s;
+#aboutmetext {
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: normal;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  animation: showup 2s;
 }
-li:nth-child(5) {
-  animation: showup 7s;
+
+.knowledge{
+  text-align: center;
+}
+.skill {
+  font-size: 1.5rem;
+  list-style-type: none;
+  color: #c3073f;
+  animation: showup 2s;
+}
+@media (min-width: 900px) {
+  .nav { grid-template-columns: repeat(3, 1fr);}
+  #aboutme{
+    width:80%;
+  }
+}
+@media (max-width: 900px) {
+  /* #blob {display: none;} */
+  body{
+    margin-top: 12.5vh;
+    overflow: visible;
+  }
+  .text {
+    height: 180vh;
+  }
+  #aboutme{
+    width: 80%;
+  }
+  h1{
+    margin-bottom: 10vh;
+    font-size: 90px; height: 70px;
+    line-height: 70px;
+  }
+  h2{font-size: 30px;}
+  .nav {margin: 0; grid-gap: 3rem;}
+  .text{margin-top: -3vh;}
 }
 
 @keyframes showup {
   0% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+@keyframes textclip {
+  to {background-position: 200% center;}
 }
