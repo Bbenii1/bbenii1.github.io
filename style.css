@@ -109,7 +109,7 @@ h2 {
 }
 
 hr {
-  width: 70vw;
+  width: 75vw;
   margin: 10vh auto 10vh auto;
   animation: showup 2s;
 }
@@ -154,7 +154,7 @@ hr {
     height: 180vh;
   }
   #aboutme{
-    width: 80%;
+    width: 90%;
   }
   h1{
     margin-bottom: 10vh;
