@@ -22,7 +22,7 @@ body {
   justify-content: center;
   height: 150vh;
   user-select: none;
-} 
+}
 
 h1 {
   font-size: 7rem;
@@ -186,10 +186,42 @@ hr {
 
 /* mint theme */
 :root{
-  --background-color: #1d1a19;
+  --background-color: #232422;
   --font-color: #fff;
   --color-variant-1: #81bc90;
   --color-variant-2: #4d7056;
   --color-variant-3: #334a39;
   --link-color: #689775;
 }
+
+
+/* experimental */
+/* @keyframes bg-animation {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
+.bg {
+  z-index: -1;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .5s infinite;
+  opacity: .9;
+  visibility: visible;
+  padding: 0;
+} */
