@@ -175,24 +175,24 @@ hr {
 }
 
 /*default red theme*/
-/* :root{
+:root{
   --background-color: #1a1a1a;
   --font-color: #fff;
   --color-variant-1: #6f2232;
   --color-variant-2: #950740;
   --color-variant-3: #c3073f;
   --link-color: #c3073f;
-} */
+}
 
 /* mint theme */
-:root{
+/*:root{
   --background-color: #232422;
   --font-color: #fff;
   --color-variant-1: #81bc90;
   --color-variant-2: #4d7056;
   --color-variant-3: #334a39;
   --link-color: #689775;
-}
+}*/
 
 
 /* experimental */
