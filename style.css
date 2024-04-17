@@ -30,23 +30,22 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10vh;
   padding: 0;
-  z-index: 3;
+  /* z-index: 3;
   height: 85px;
   line-height: 85px;
-  width: 280px;
+  width: 280px; */
   animation: showup 2s, textclip 3s linear infinite;
   font-weight: bold;
   background-image: linear-gradient(
     90deg,
-    var(--color-variant-1) 0%,
-    var(--color-variant-2) 25%,
-    var(--color-variant-3) 50%,
-    var(--color-variant-2) 75%,
-    var(--color-variant-1) 100%
+    var(--color-variant-1),
+    var(--color-variant-2),
+    var(--color-variant-3),
+    var(--color-variant-1)
   );
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 200% auto;
+  background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,6 +170,7 @@ hr {
 }
 
 @keyframes textclip {
+  from{background-position: 0% center;}
   to {background-position: 200% center;}
 }
 
@@ -178,7 +178,7 @@ hr {
 :root{
   --background-color: #1a1a1a;
   --font-color: #fff;
-  --color-variant-1: #6f2232;
+  --color-variant-1: #7e2839;
   --color-variant-2: #950740;
   --color-variant-3: #c3073f;
   --link-color: #c3073f;
