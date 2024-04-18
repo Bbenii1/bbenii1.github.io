@@ -107,6 +107,38 @@ h2 {
   color: var(--link-color);
 }
 
+.fancy > .letter{
+  display: inline-block;
+}
+
+.fancy:hover > .letter:nth-child(1){
+  transform:  translate(20%, -50%) rotate(12deg);
+}
+.fancy:hover > .letter:nth-child(2){
+  transform:  translate(40%, -10%) rotate(-4deg);
+}
+.fancy:hover > .letter:nth-child(3){
+  transform:  translate(10%, -70%) rotate(-14deg);
+}
+.fancy:hover > .letter:nth-child(4){
+  transform:  translate(23%, -50%) rotate(6deg);
+}
+.fancy:hover > .letter:nth-child(5){
+  transform:  translate(-13%, 5%) rotate(26deg);
+}
+.fancy:hover > .letter:nth-child(6){
+  transform:  translate(30%, -40%) rotate(12deg);
+}
+.fancy:hover > .letter:nth-child(7){
+  transform:  translate(14%, 30%) rotate(-5deg);
+}
+.fancy:hover > .letter:nth-child(8){
+  transform:  translate(44%, 33%) rotate(34deg);
+}
+.fancy:hover > .letter:nth-child(9){
+  transform:  translate(40%, -30%) rotate(-12deg);
+}
+
 hr {
   width: 75vw;
   margin: 10vh auto 10vh auto;
@@ -137,6 +169,11 @@ hr {
   color: var(--link-color);
   animation: showup 2s;
 }
+
+/* .text:has(.fancy:hover) .effect:not(.fancy){
+  opacity: .2;
+} */
+
 @media (min-width: 900px) {
   .nav { grid-template-columns: repeat(3, 1fr);}
 
