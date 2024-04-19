@@ -1,3 +1,13 @@
+/*default red theme*/
+:root{
+  --background-color: #101010;
+  --font-color: #fff;
+  --color-variant-1: #7e2839;
+  --color-variant-2: #950740;
+  --color-variant-3: #c3073f;
+  --link-color: #c3073f;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--font-color);
@@ -14,13 +24,43 @@ body {
   overflow: visible;
 }
 
+#bg {
+  z-index: -1;
+  position: fixed;
+  overflow: hidden;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .75s infinite;
+  opacity: .75;
+}
+
+@keyframes bg-animation {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
+
 .text {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 150vh;
+  height: 175vh;
   user-select: none;
 }
 
@@ -34,7 +74,7 @@ h1 {
   height: 85px;
   line-height: 85px;
   width: 280px; */
-  animation: showup 2s, textclip 3s linear infinite;
+  animation: showup 2s, textclip 2s linear infinite;
   font-weight: bold;
   background-image: linear-gradient(
     90deg,
@@ -49,6 +89,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
 h2 {
@@ -60,7 +101,7 @@ h2 {
   padding: 0;
   height: 60px;
   z-index: 3;
-  animation: showup 2s;
+  animation: showup 2s ease-out;
   font-weight: bold;
 }
 
@@ -79,7 +120,7 @@ h2 {
 .nav * {
   box-sizing: border-box;
   transition: all .35s ease;
-  animation: showup 2s;
+  animation: showup 1.5s ease-out;
 }
 
 .nav li {
@@ -141,15 +182,15 @@ h2 {
 
 hr {
   width: 75vw;
-  margin: 10vh auto 10vh auto;
-  animation: showup 2s;
+  margin: 15vh auto 15vh auto;
+  animation: showup 2s ease-out;
 }
 
 #aboutme {
   width: 60%;
   display: block;
   text-align: center;
-  animation: showup 2s;
+  animation: showup 1.75s ease-out;
 }
 #aboutmetext {
   text-align: center;
@@ -157,7 +198,7 @@ hr {
   letter-spacing: normal;
   margin-left: 10vw;
   margin-right: 10vw;
-  animation: showup 2s;
+  animation: showup 2s ease-out;
 }
 
 .knowledge{
@@ -167,7 +208,7 @@ hr {
   font-size: 1.5rem;
   list-style-type: none;
   color: var(--link-color);
-  animation: showup 2s;
+  animation: showup 2s ease-out;
 }
 
 /* .text:has(.fancy:hover) .effect:not(.fancy){
@@ -186,7 +227,7 @@ hr {
     overflow: visible;
   }
 
-  .text {height: 180vh;}
+  .text {height: 185vh;}
 
   #aboutme{width: 90%;}
 
@@ -199,11 +240,13 @@ hr {
   h2{font-size: 30px;}
   .nav {margin: 0; grid-gap: 3rem;}
   .text{margin-top: -3vh;}
+
+  hr{margin: 10vh auto 10vh auto;}
 }
 
 @keyframes showup {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {opacity: 0; transform: translate(0, 75%);}
+  100% {opacity: 1; transform: translate(0, 0);}
 }
 
 @keyframes textclip {
@@ -211,15 +254,6 @@ hr {
   to {background-position: 200% center;}
 }
 
-/*default red theme*/
-:root{
-  --background-color: #1a1a1a;
-  --font-color: #fff;
-  --color-variant-1: #7e2839;
-  --color-variant-2: #950740;
-  --color-variant-3: #c3073f;
-  --link-color: #c3073f;
-}
 
 /* mint theme */
 /*:root{
