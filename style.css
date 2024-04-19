@@ -74,7 +74,7 @@ h1 {
   height: 85px;
   line-height: 85px;
   width: 280px; */
-  animation: showup 2s, textclip 2s linear infinite;
+  animation: showup 2s, textclip 2.5s linear infinite;
   font-weight: bold;
   background-image: linear-gradient(
     90deg,
@@ -120,7 +120,7 @@ h2 {
 .nav * {
   box-sizing: border-box;
   transition: all .35s ease;
-  animation: showup 1.5s ease-out;
+  animation: showup 2s ease-out;
 }
 
 .nav li {
