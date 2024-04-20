@@ -6,9 +6,61 @@
   --color-variant-2: #950740;
   --color-variant-3: #c3073f;
   --link-color: #c3073f;
+
+  --bright-background-color: #e3ddcf;
+  --bright-font-color: #101010;
+  --bright-color-variant-1: #81bc90;
+  --bright-color-variant-2: #54805f;
+  --bright-color-variant-3: #334a39;
+  --bright-link-color: #689775;
 }
 
+/* bright style */
+
+.bright{
+  transition: .5s;
+  color: var(--bright-font-color);
+}
+.bright a:hover{
+  color: var(--bright-link-color);
+}
+
+.bright .skill{
+  transition: .5s;
+  color: var(--bright-color-variant-2);
+}
+
+.bright-bg{
+  transition: .5s;
+  background-color: var(--bright-background-color);
+}
+.bright-h1{
+  transition: .5s;
+  background-image: linear-gradient(
+    90deg,
+    var(--bright-color-variant-1),
+    var(--bright-color-variant-2),
+    var(--bright-color-variant-1)
+  );
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+Button {
+  color: #fff;
+  border: 1px solid;
+  border-radius: 24px;
+  background: none;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  display: block;
+  position: fixed;
+  margin: 20px 0 0  20px;
+}
+
+/* body */
 body {
+  transition: .5s;
   background-color: var(--background-color);
   color: var(--font-color);
   text-transform: uppercase;
@@ -40,41 +92,26 @@ body {
   opacity: .75;
 }
 
-@keyframes bg-animation {
-  0% { transform: translate(0,0) }
-  10% { transform: translate(-5%,-5%) }
-  20% { transform: translate(-10%,5%) }
-  30% { transform: translate(5%,-10%) }
-  40% { transform: translate(-5%,15%) }
-  50% { transform: translate(-10%,5%) }
-  60% { transform: translate(15%,0) }
-  70% { transform: translate(0,10%) }
-  80% { transform: translate(-15%,0) }
-  90% { transform: translate(10%,5%) }
-  100% { transform: translate(5%,0) }
-}
-
+/* content */
 .text {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 175vh;
+  height: 160vh;
   user-select: none;
 }
 
 h1 {
+  transition: .5s;
+  text-transform: none;
   font-size: 7rem;
   margin: 0;
   margin-top: 10px;
   margin-bottom: 10vh;
   padding: 0;
-  /* z-index: 3;
-  height: 85px;
-  line-height: 85px;
-  width: 280px; */
-  animation: showup 2s, textclip 2.5s linear infinite;
+  animation: showup 2s, textclip 5s linear infinite;
   font-weight: bold;
   background-image: linear-gradient(
     90deg,
@@ -89,13 +126,13 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 h2 {
+  transition: .5s;
+  text-transform: none;
   color: var(--font-color);
   background-size: cover;
-  text-transform: uppercase;
   font-size: 40px;
   margin: 0;
   padding: 0;
@@ -130,8 +167,15 @@ h2 {
   padding: 0;
 }
 
-.nav a {
+a{
   color: var(--font-color);
+}
+
+a:hover{
+  color: var(--link-color);
+}
+
+.nav a {
   position: relative;
   text-decoration: none;
   padding: .5em .8em;
@@ -144,14 +188,9 @@ h2 {
   transition: color .2s;
 }
 
-.nav a:hover{
-  color: var(--link-color);
-}
-
 .fancy > .letter{
   display: inline-block;
 }
-
 .fancy:hover > .letter:nth-child(1){
   transform:  translate(20%, -30%) rotate(12deg);
 }
@@ -182,54 +221,80 @@ h2 {
 
 hr {
   width: 75vw;
-  margin: 15vh auto 15vh auto;
+  margin: 15vh 0 10vh 0;
   animation: showup 2s ease-out;
 }
 
+/* about me section */
 #aboutme {
   width: 60%;
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
   text-align: center;
   animation: showup 1.75s ease-out;
 }
+
+#aboutme > :nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: fit-content;
+  margin: auto;
+}
+
+#aboutme > p {
+  grid-column: 1 / 2;
+  grid-row: 2 / 2;
+}
+
+#aboutme > :nth-child(3){
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
+  height: fit-content;
+  margin: auto;
+}
+
+#aboutme > .knowledge {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
 #aboutmetext {
   text-align: center;
   font-size: 1rem;
   letter-spacing: normal;
-  margin-left: 10vw;
-  margin-right: 10vw;
   animation: showup 2s ease-out;
+  text-transform: none;
 }
 
 .knowledge{
   text-align: center;
 }
+
 .skill {
+  transition: .5s;
   font-size: 1.5rem;
   list-style-type: none;
   color: var(--link-color);
   animation: showup 2s ease-out;
 }
 
-/* .text:has(.fancy:hover) .effect:not(.fancy){
-  opacity: .2;
-} */
-
 @media (min-width: 900px) {
   .nav { grid-template-columns: repeat(3, 1fr);}
-
   #aboutme{width:80%;}
 }
+
 @media (max-width: 900px) {
 
   body{
-    margin-top: 12.5vh;
+    margin-top: 5vh;
     overflow: visible;
   }
 
-  .text {height: 185vh;}
+  .text {height: 195vh;}
 
-  #aboutme{width: 90%;}
+  #aboutme{width: 75vw; display: block;}
 
   h1{
     margin-bottom: 10vh;
@@ -241,9 +306,17 @@ hr {
   .nav {margin: 0; grid-gap: 3rem;}
   .text{margin-top: -3vh;}
 
-  hr{margin: 10vh auto 10vh auto;}
+  hr{margin: 10vh 0 5vh 0;}
+  #aboutme > :nth-child(1), #aboutme >:nth-child(3){
+    margin-top: 5vh;
+  }
+
+  button {
+    margin: 20px 0 0 20px;
+  }
 }
 
+/* animations */
 @keyframes showup {
   0% {opacity: 0; transform: translate(0, 75%);}
   100% {opacity: 1; transform: translate(0, 0);}
@@ -254,20 +327,7 @@ hr {
   to {background-position: 200% center;}
 }
 
-
-/* mint theme */
-/*:root{
-  --background-color: #232422;
-  --font-color: #fff;
-  --color-variant-1: #81bc90;
-  --color-variant-2: #4d7056;
-  --color-variant-3: #334a39;
-  --link-color: #689775;
-}*/
-
-
-/* experimental */
-/* @keyframes bg-animation {
+@keyframes bg-animation {
   0% { transform: translate(0,0) }
   10% { transform: translate(-5%,-5%) }
   20% { transform: translate(-10%,5%) }
@@ -280,19 +340,3 @@ hr {
   90% { transform: translate(10%,5%) }
   100% { transform: translate(5%,0) }
 }
-.bg {
-  z-index: -1;
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
-  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-  background-repeat: repeat;
-  animation: bg-animation .5s infinite;
-  opacity: .9;
-  visibility: visible;
-  padding: 0;
-} */
