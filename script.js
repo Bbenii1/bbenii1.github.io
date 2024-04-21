@@ -30,10 +30,10 @@ function change(){
 
 	const btn = document.querySelector("button");
 	if(btn.value == 1){
-		btn.innerHTML = "<i style='width: 16px; height: 16px;' class='bx bxs-sun'></i>"
+		btn.innerHTML = "<img src='images/sun-solid-24.png' alt=''>"
 		btn.value = '0';
 	} else if(btn.value == 0){
-		btn.innerHTML = "<i style='width: 16px; height: 16px;' class='bx bxs-moon'>"
+		btn.innerHTML = "<img style='filter: invert(); transition: .5s;' src='images/moon-solid-24.png' alt=''>"
 		btn.value = '1';
 	}
 }
