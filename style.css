@@ -310,7 +310,10 @@ hr {
   #aboutme > :nth-child(1), #aboutme >:nth-child(3){
     margin-top: 5vh;
   }
-
+  
+  button{
+    padding: 0;
+  }
 }
 
 /* animations */
