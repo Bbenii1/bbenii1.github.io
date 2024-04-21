@@ -30,7 +30,7 @@ function change(){
 
 	const btn = document.querySelector("button");
 	if(btn.value == 1){
-		btn.innerHTML = "<i class='bx bxs-sun' ></i>"
+		btn.innerHTML = "<i class='bx bxs-sun'></i>"
 		btn.value = '0';
 	} else if(btn.value == 0){
 		btn.innerHTML = "<i class='bx bxs-moon'></i>"
