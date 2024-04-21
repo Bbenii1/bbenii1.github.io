@@ -53,8 +53,7 @@ Button {
   width: 32px;
   height: 32px;
   text-align: center;
-  display: grid;
-  place-items: center;
+  display: block;
   position: fixed;
   margin: 20px 0 0  20px;
 }
