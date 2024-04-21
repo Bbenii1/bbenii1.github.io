@@ -30,10 +30,10 @@ function change(){
 
 	const btn = document.querySelector("button");
 	if(btn.value == 1){
-		btn.innerHTML = "<i class='bx bxs-sun' ></i>"
+		btn.innerHTML = "<i style='width: 16px; height: 16px;' class='bx bxs-sun'></i>"
 		btn.value = '0';
 	} else if(btn.value == 0){
-		btn.innerHTML = "<i class='bx bxs-moon'></i>"
+		btn.innerHTML = "<i style='width: 16px; height: 16px;' class='bx bxs-moon'>"
 		btn.value = '1';
 	}
 }
