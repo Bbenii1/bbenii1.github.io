@@ -58,9 +58,7 @@ Button {
   margin: 20px 0 0 20px;
   padding: 0;
 }
-button::after{
-  content: \F494;
-}
+
 img{
   transition: .5s;
   height: 16px;
