@@ -7,7 +7,7 @@
   --color-variant-3: #c3073f;
   --link-color: #c3073f;
 
-  --bright-background-color: #e3ddcf;
+  --bright-background-color: #d6cdb6;
   --bright-font-color: #101010;
   --bright-color-variant-1: #81bc90;
   --bright-color-variant-2: #54805f;
@@ -260,6 +260,15 @@ hr {
   grid-row: 2/2;
 }
 
+li{
+  /* display: inline-block; */
+  margin-right: 1rem;
+}
+
+#aboutme > #aboutmetext{
+  margin: 0 2.5vw 0 2.5vw;
+}
+
 #aboutmetext {
   text-align: center;
   font-size: 1rem;
@@ -270,6 +279,9 @@ hr {
 
 .knowledge{
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill {
