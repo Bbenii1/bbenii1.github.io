@@ -8,43 +8,153 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images\favicon.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
-    <script src="script.js" type="text/javascript"></script> 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="script.js" type="text/javascript"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body onload="init()" class="" id="body">
-    <button onclick="change()" value="1"><i class='bx bxs-moon'></i></button>
-    <div class="text">
-        <h2 class="">Hey, I'm</h2>
+    <button onclick="change()" value="1" class="theme-change"><i class='bx bxs-moon'></i></button>
+    <div class="content">
+        <h2>Hey, I'm</h2>
         <h1>Beni</h1>
         <ul class="nav" id="noselect">
-            <li><a href="https://www.instagram.com/szlonkai_benedek/" target="_blank" class="fancy" id="inst_blast">Instagram</a></li>
-            <li><a href="https://github.com/Bbenii1" target="_blank" class="fancy" id="git_blast">GitHub</a></li>
-            <li><a href="https://discordapp.com/users/679768126384373847" target="_blank" class="fancy" id="dis_blast">Discord</a></li>
+            <li><a href="https://www.instagram.com/szlonkai_benedek/" target="_blank" class="btn-style">Instagram</a></li>
+            <li><a href="https://github.com/Bbenii1" target="_blank" class="btn-style">GitHub</a></li>
+            <li><a href="https://discordapp.com/users/679768126384373847" target="_blank" class="btn-style">Discord</a></li>
         </ul>
-        <hr>
+        <hr noshade>
         <div id="aboutme">
             <h3>About Me</h3>
-            <p id="aboutmetext" style=" display: block">Hi there! I'm a 17-year-old high school student living in Hungary. Currently I'm learning computer science and have a fervent passion for programming, photography, and 3D printing. I'm always eager to learn and explore new concepts, and I strive to apply my skills and knowledge to create innovative and impactful projects. </p>
-            <h3>My Current Skills</h3>
-            <div class="knowledge">
-                <ul style="padding-left: 0; margin: auto; vertical-align: middle; position: relative;">
-                    <li class="skill"><i class='bx bxl-html5'></i>HTML</li>
-                    <li class="skill"><i class='bx bxs-file-css' ></i>CSS</li>
-                    <li class="skill"><i class='bx bxl-php' ></i>PHP</li>
-                    <li class="skill"><i class='bx bxl-python' ></i>Python</li>
-                    <li class="skill"><i class='bx bxl-javascript' ></i>JavaScript</li>
-                    
-                </>
+            <p>Hi there! I'm a 18-year-old high school student living in Hungary. Currently I'm learning computer science and have a fervent passion for programming, photography, and 3D printing. I'm always eager to learn and explore new concepts, and I strive to apply my skills and knowledge to create innovative and impactful projects. </p>
+            <h3>Experienced in</h3>
+            <div class="skills">
+                <a class="btn-style" href="https://html.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
+                        <path fill="#e44d26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z" />
+                        <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z" />
+                        <path fill="#ebebeb" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z" />
+                        <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z" />
+                    </svg>HTML
+                </a>
+                <a class="btn-style" href="https://css3.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
+                        <path fill="#1572b6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754l-45.243 12.543z" />
+                        <path fill="#33a9dc" d="m64.001 117.062l36.559-10.136l8.601-96.354h-45.16z" />
+                        <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711l-3.4 38.114h-30.95z" />
+                        <path fill="#ebebeb" d="m64.083 87.349l-.061.018l-15.403-4.159l-.985-11.031H33.752l1.937 21.717l28.331 7.863l.063-.018z" />
+                        <path fill="#fff" d="m81.127 64.675l-1.666 18.522l-15.426 4.164v14.39l28.354-7.858l.208-2.337l2.406-26.881z" />
+                        <path fill="#ebebeb" d="M64.048 23.435v13.831H30.64l-.277-3.108l-.63-7.012l-.331-3.711zm-.047 27.996v13.831H48.792l-.277-3.108l-.631-7.012l-.33-3.711z" />
+                    </svg>CSS
+                </a>
+                <a class="btn-style" href="https://www.php.net/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+                        <path fill="#8993be" d="M7.6 13.791a2.35 2.35 0 0 1 1.745.483a1.92 1.92 0 0 1 .207 1.66a2.78 2.78 0 0 1-.918 1.748a3.38 3.38 0 0 1-2.07.529h-1.4l.86-4.411ZM2 22.677h2.3l.545-2.8h1.967a7 7 0 0 0 2.144-.277a4.1 4.1 0 0 0 1.53-.918A4.6 4.6 0 0 0 11.93 16.1a3.29 3.29 0 0 0-.55-2.922a3.67 3.67 0 0 0-2.91-1.049H4.057ZM13.617 9.323H15.9l-.553 2.8h2.031a3.96 3.96 0 0 1 2.645.669a2.21 2.21 0 0 1 .436 2.167l-.954 4.909h-2.31l.908-4.667a1.27 1.27 0 0 0-.114-1.086a1.6 1.6 0 0 0-1.144-.286h-1.823l-1.175 6.044h-2.288Zm11.922 4.468a2.35 2.35 0 0 1 1.745.483a1.92 1.92 0 0 1 .207 1.66a2.78 2.78 0 0 1-.918 1.748a3.38 3.38 0 0 1-2.074.529H23.1l.858-4.416Zm-5.6 8.886h2.3l.545-2.8h1.968A7 7 0 0 0 26.9 19.6a4.1 4.1 0 0 0 1.53-.918a4.6 4.6 0 0 0 1.439-2.582a3.29 3.29 0 0 0-.55-2.922a3.67 3.67 0 0 0-2.909-1.046h-4.42Z" />
+                    </svg>PHP
+                </a>
+                <a class="btn-style" href="https://www.python.org/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
+                        <linearGradient id="deviconPython0" x1="70.252" x2="170.659" y1="1237.476" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#5a9fd4" />
+                            <stop offset="1" stop-color="#306998" />
+                        </linearGradient>
+                        <linearGradient id="deviconPython1" x1="209.474" x2="173.62" y1="1098.811" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#ffd43b" />
+                            <stop offset="1" stop-color="#ffe873" />
+                        </linearGradient>
+                        <path fill="url(#deviconPython0)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007c-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521c-2.268 9.405-2.368 15.275 0 25.096c1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837c-4.244-.706-8.645-1.027-12.866-1.008M50.037 9.557c2.55 0 4.634 2.117 4.634 4.721c0 2.593-2.083 4.69-4.634 4.69c-2.56 0-4.633-2.097-4.633-4.69c-.001-2.604 2.073-4.721 4.633-4.721" transform="translate(0 10.26)" />
+                        <path fill="url(#deviconPython1)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547c7.816 2.297 15.312 2.713 24.665 0c6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519c2.578-7.735 2.467-15.174 0-25.096c-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692c0 2.602-2.074 4.719-4.634 4.719c-2.55 0-4.633-2.117-4.633-4.719c0-2.595 2.083-4.692 4.633-4.692" transform="translate(0 10.26)" />
+                        <radialGradient id="deviconPython2" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#b8b8b8" stop-opacity="0.498" />
+                            <stop offset="1" stop-color="#7f7f7f" stop-opacity="0" />
+                        </radialGradient>
+                        <path fill="url(#deviconPython2)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416c-18.276 0-33.092-2.873-33.092-6.416s14.815-6.417 33.092-6.417c18.275 0 33.091 2.872 33.091 6.417" opacity="0.444" />
+                    </svg>Python
+                </a>
+                <a class="btn-style" href="https://www.javascript.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
+                        <path fill="#f0db4f" d="M1.408 1.408h125.184v125.185H1.408z" />
+                        <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981c-3.832-1.761-8.104-3.022-9.377-5.926c-.452-1.69-.512-2.642-.226-3.665c.821-3.32 4.784-4.355 7.925-3.403c2.023.678 3.938 2.237 5.093 4.724c5.402-3.498 5.391-3.475 9.163-5.879c-1.381-2.141-2.118-3.129-3.022-4.045c-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235c-5.926 6.724-4.236 18.492 2.975 23.335c7.104 5.332 17.54 6.545 18.873 11.531c1.297 6.104-4.486 8.08-10.234 7.378c-4.236-.881-6.592-3.034-9.139-6.949c-4.688 2.713-4.688 2.713-9.508 5.485c1.143 2.499 2.344 3.63 4.26 5.795c9.068 9.198 31.76 8.746 35.83-5.176c.165-.478 1.261-3.666.38-8.581M69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149c-1.713 3.558-6.152 3.117-8.175 2.427c-2.059-1.012-3.106-2.451-4.319-4.485c-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901c4.462 2.678 10.459 3.499 16.731 2.059c4.082-1.189 7.604-3.652 9.448-7.401c2.666-4.915 2.094-10.864 2.07-17.444c.06-10.735.001-21.468.001-32.237" />
+                    </svg>JavaScript
+                </a>
+                <a class="btn-style" href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" style="letter-spacing: normal;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
+                        <path fill="#9b4f96" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7s-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7" />
+                        <path fill="#68217a" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7s2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8z" />
+                        <path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20c-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h4.2v4.7h-5.1l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8z" />
+                    </svg>C#
+                </a>
+                <a class="btn-style" href="https://www.mysql.com/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 128 128">
+                        <path fill="#00618a" d="M117.688 98.242c-6.973-.191-12.297.461-16.852 2.379c-1.293.547-3.355.559-3.566 2.18c.711.746.82 1.859 1.387 2.777c1.086 1.754 2.922 4.113 4.559 5.352c1.789 1.348 3.633 2.793 5.551 3.961c3.414 2.082 7.223 3.27 10.504 5.352c1.938 1.23 3.859 2.777 5.75 4.164c.934.684 1.563 1.75 2.773 2.18v-.195c-.637-.812-.801-1.93-1.387-2.777l-2.578-2.578c-2.52-3.344-5.719-6.281-9.117-8.719c-2.711-1.949-8.781-4.578-9.91-7.73l-.199-.199c1.922-.219 4.172-.914 5.949-1.391c2.98-.797 5.645-.59 8.719-1.387l4.164-1.187v-.793c-1.555-1.594-2.664-3.707-4.359-5.152c-4.441-3.781-9.285-7.555-14.273-10.703c-2.766-1.746-6.184-2.883-9.117-4.363c-.988-.496-2.719-.758-3.371-1.586c-1.539-1.961-2.379-4.449-3.566-6.738c-2.488-4.793-4.93-10.023-7.137-15.066c-1.504-3.437-2.484-6.828-4.359-9.91c-9-14.797-18.687-23.73-33.695-32.508c-3.195-1.867-7.039-2.605-11.102-3.57l-6.543-.395c-1.332-.555-2.715-2.184-3.965-2.977C16.977 3.52 4.223-3.312.539 5.672C-1.785 11.34 4.016 16.871 6.09 19.746c1.457 2.012 3.32 4.273 4.359 6.539c.688 1.492.805 2.984 1.391 4.559c1.438 3.883 2.695 8.109 4.559 11.695c.941 1.816 1.98 3.727 3.172 5.352c.727.996 1.98 1.438 2.18 2.973c-1.227 1.715-1.297 4.375-1.984 6.543c-3.098 9.77-1.926 21.91 2.578 29.137c1.383 2.223 4.641 6.98 9.117 5.156c3.918-1.598 3.043-6.539 4.164-10.902c.254-.988.098-1.715.594-2.379v.199l3.57 7.133c2.641 4.254 7.324 8.699 11.297 11.699c2.059 1.555 3.68 4.242 6.344 5.152v-.199h-.199c-.516-.805-1.324-1.137-1.98-1.781c-1.551-1.523-3.277-3.414-4.559-5.156c-3.613-4.902-6.805-10.27-9.711-15.855c-1.391-2.668-2.598-5.609-3.77-8.324c-.453-1.047-.445-2.633-1.387-3.172c-1.281 1.988-3.172 3.598-4.164 5.945c-1.582 3.754-1.789 8.336-2.375 13.082c-.348.125-.195.039-.398.199c-2.762-.668-3.73-3.508-4.758-5.949c-2.594-6.164-3.078-16.09-.793-23.191c.59-1.836 3.262-7.617 2.18-9.316c-.516-1.691-2.219-2.672-3.172-3.965c-1.18-1.598-2.355-3.703-3.172-5.551c-2.125-4.805-3.113-10.203-5.352-15.062c-1.07-2.324-2.875-4.676-4.359-6.738c-1.645-2.289-3.484-3.977-4.758-6.742c-.453-.984-1.066-2.559-.398-3.566c.215-.684.516-.969 1.191-1.191c1.148-.887 4.352.297 5.547.793c3.18 1.32 5.832 2.578 8.527 4.363c1.289.855 2.598 2.512 4.16 2.973h1.785c2.789.641 5.914.195 8.523.988c4.609 1.402 8.738 3.582 12.488 5.949c11.422 7.215 20.766 17.48 27.156 29.734c1.027 1.973 1.473 3.852 2.379 5.945c1.824 4.219 4.125 8.559 5.941 12.688c1.816 4.113 3.582 8.27 6.148 11.695c1.348 1.801 6.551 2.766 8.918 3.766c1.66.699 4.379 1.43 5.949 2.379c3 1.809 5.906 3.965 8.723 5.945c1.402.992 5.73 3.168 5.945 4.957zm-88.605-75.52c-1.453-.027-2.48.156-3.566.395v.199h.195c.695 1.422 1.918 2.34 2.777 3.566l1.98 4.164l.199-.195c1.227-.867 1.789-2.25 1.781-4.363c-.492-.52-.562-1.164-.992-1.785c-.562-.824-1.66-1.289-2.375-1.98zm0 0" />
+                    </svg>MySQL
+                </a>
+            </div>
+            <h3>Recent projects</h3>
+            <div class="projects">
+                <a href="http://todo-site.infinityfreeapp.com/" target="_blank">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/images/todo-site.png" alt="Todo site header" title="Todo site header">
+                        </div>
+                        <div class="card-date">MAR 17, 2024</div>
+                        <div class="card-content">
+                            <h4>ToDo-site</h4>
+                            <p>
+                                A half-finished task organizer website of mine where you can create, track tasks and set deadlines.
+                            </p>
+                        </div>
+                        <div class="card-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/Bbenii1/Temperature-converter-in-python-with-GUI" target="_blank">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/images/temp-converter.png" alt="Temperature converter header" title="Temperature converter header">
+                        </div>
+                        <div class="card-date">NOV 13, 2023</div>
+                        <div class="card-content">
+                            <h4>Temperature converter in python (GUI)</h4>
+                            <p>
+                                A simple GUI based temperature converter written in python using tkinter library.
+                            </p>
+                        </div>
+                        <div class="card-tags">
+                        <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/azigazibarni/2023-24-Projekt-I./releases" target="_blank">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/images/convert-project.png" alt="Number system converter header" title="Number system converter header">
+                        </div>
+                        <div class="card-date">FEB 26, 2024</div>
+                        <div class="card-content">
+                            <h4>Number system converter</h4>
+                            <p>
+                                A group project. Simple GUI based number system converter and calculator written in python using tkinter library.
+                            </p>
+                        </div>
+                        <div class="card-tags">
+                        <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="btn-style" href="https://github.com/Bbenii1?tab=repositories" target="_blank" style="font-size: 10px;">Check my other projects</a>
             </div>
         </div>
     </div>
-    <div id="bg"></div>
+    <div id=""></div>
 </body>
 </html>
