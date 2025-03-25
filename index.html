@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <!--FIXME: change favicon-->
     <link rel="icon" type="image/png" sizes="32x32" href="images\favicon.png">
-    <script src="script.js" type="text/javascript"></script>
+    <script defer src="script.js" type="text/javascript"></script>
+
+    <!-- Import the component -->
+    <!--https://web.dev/articles/model-viewer-->
+    <!--https://modelviewer.dev/docs/index.html-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+
 </head>
 <body id="body">
     <opening></opening>
@@ -31,16 +39,49 @@
         <!--TODO write something interesting about myself :) -->
     </div>
     <hr>
+
     <div id="experience">
         <h3>Experiences</h3>
         <p>I have a few :3 <br> </p>
         <!--TODO make a collection about the languages I know with scroll-driven animations -->
-        <!--https://scroll-driven-animations.style/-->
+        <!-- https://scroll-driven-animations.style/ -->
+        <div class="skills">
+            <a class="card" direction="1" speed="4" href="https://html.com/" target="_blank">
+                <img src="images/html5.svg" alt="html">
+                HTML
+            </a>
+            <a class="card" direction="-1" speed="2" href="https://css3.com/" target="_blank">
+                <img src="images/css.svg" alt="css">
+                CSS
+            </a>
+            <a class="card" direction="1" speed="3" href="https://www.php.net/" target="_blank">
+                <img src="images/php.svg" alt="php">
+                PHP
+            </a>
+            <a class="card" direction="1" speed="2" href="https://www.python.org/" target="_blank">
+                <img src="images/python.svg" alt="python">
+                Python
+            </a>
+            <a class="card" direction="-1" speed="2" href="https://www.javascript.com/" target="_blank">
+                <img src="images/js.svg" alt="javascript">
+                JavaScript
+            </a>
+            <a class="card" direction="1" speed="1" href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" style="letter-spacing: normal;">
+                <img src="images/c-sharp.svg" alt="c-sharp">
+                C Sharp
+            </a>
+            <a class="card" direction="-1" speed="3" href="https://www.mysql.com/" target="_blank">
+                <img src="images/mysql.svg" alt="mysql">
+                MySQL
+            </a>
+        </div>
     </div>
     <hr>
+
     <div id="projects">
         <h3>Recent projects</h3>
         <p>What projects?</p>
+        <model-viewer src="models/dragon.glb" camera-controls touch-action="pan-y" disable-zoom style=" width: 100%; height: 50%; object-fit: contain;"></model-viewer>
         <!--TODO make some scroll animated library about the projects I've done -->
     </div>
 
