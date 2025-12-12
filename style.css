@@ -126,6 +126,11 @@ a {
   }*/
 }
 
+a.disabled{
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
 /*opening animation*/
 first, second, third {
   right: 0;
