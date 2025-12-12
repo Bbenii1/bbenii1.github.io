@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <!--FIXME: change favicon-->
     <link rel="icon" type="image/png" sizes="32x32" href="images\favicon.png">
-    <script src="script.js" type="text/javascript"></script>
+    <script defer src="script.js" type="text/javascript"></script>
+
+    <!-- Import the component -->
+    <!--https://web.dev/articles/model-viewer-->
+    <!--https://modelviewer.dev/docs/index.html-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+
 </head>
 <body id="body">
     <opening></opening>
@@ -16,36 +24,21 @@
     <div id="menu-button"><img src="images/menu-icon.svg" alt="menu"></div>
     <menu>
         <li><a href="#">Home</a></li>
-        <li><a href="#aboutme">About me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#aboutme" class="disabled">About me</a></li>
+        <li><a href="#experience" class="disabled">Experience</a></li>
+        <li><a href="#projects" class="disabled">Projects</a></li>
     </menu>
     <landing>
         <h1>Benedek</h1>
     </landing>
     <hr>
 
-    <div id="aboutme">
-        <h3>About Me</h3>
-        <p>Hi! ^.^ <br> this page needs a bit more work...</p>
-        <!--TODO write something interesting about myself :) -->
-    </div>
-    <hr>
-    <div id="experience">
-        <h3>Experiences</h3>
-        <p>I have a few :3 <br> </p>
-        <!--TODO make a collection about the languages I know with scroll-driven animations -->
-        <!--https://scroll-driven-animations.style/-->
-    </div>
-    <hr>
-    <div id="projects">
-        <h3>Recent projects</h3>
-        <p>What projects?</p>
-        <!--TODO make some scroll animated library about the projects I've done -->
-    </div>
+    <div style="height: 100vh;">
+        <h2 style="line-height: 100vh;">Page under construction</h2>
+    </div> 
 
     <footer>
-        <div id="contact">Contact me:<span style="font-size: 8pt; display: block">(if you want)</span>
+        <div id="contact">Contact me:
             <div id="links">
                 <a href="https://www.instagram.com/szlonkai_benedek/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
                 <a href="https://github.com/Bbenii1" target="_blank"><img src="images/github.svg" alt="Github"></a>

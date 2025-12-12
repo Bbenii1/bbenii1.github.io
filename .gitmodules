@@ -1,0 +1,3 @@
+[submodule "ogtracker-flash"]
+	path = ogtracker-flash
+	url = https://github.com/Bbenii1/OG-Star-Tracker-Firmware-Flasher.git
