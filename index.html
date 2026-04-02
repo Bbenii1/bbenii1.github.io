@@ -1,51 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benii1</title>
+    <title>Benedek — Portfolio</title>
+    <meta name="description" content="Szlonkai Benedek personal portfolio website">
     <link rel="stylesheet" href="style.css">
-    <!--FIXME: change favicon-->
-    <link rel="icon" type="image/png" sizes="32x32" href="images\favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="script.js" type="text/javascript"></script>
-
-    <!-- Import the component -->
-    <!--https://web.dev/articles/model-viewer-->
-    <!--https://modelviewer.dev/docs/index.html-->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-
 </head>
-<body id="body">
-    <opening></opening>
 
-    <div id="menu-button"><img src="images/menu-icon.svg" alt="menu"></div>
-    <menu>
-        <li><a href="#">Home</a></li>
-        <li><a href="#aboutme" class="disabled">About me</a></li>
-        <li><a href="#experience" class="disabled">Experience</a></li>
-        <li><a href="#projects" class="disabled">Projects</a></li>
-    </menu>
-    <landing>
-        <h1>Benedek</h1>
-    </landing>
-    <hr>
+<body>
 
-    <div style="height: 100vh;">
-        <h2 style="line-height: 100vh;">Page under construction</h2>
-    </div> 
+    <!-- Opening Overlay -->
+    <div id="opening-overlay"></div>
 
-    <footer>
-        <div id="contact">Contact me:
-            <div id="links">
-                <a href="https://www.instagram.com/szlonkai_benedek/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
-                <a href="https://github.com/Bbenii1" target="_blank"><img src="images/github.svg" alt="Github"></a>
-                <a href="https://discordapp.com/users/679768126384373847" target="_blank"><img src="images/discord.svg" alt="Discord"></a>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-top">
+                <a href="#" class="nav-logo">
+                    <svg class="logo-svg" viewBox="0 0 28 28" width="28" height="28" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-letter"
+                            d="M9 6 L15 6 C18.3 6 20 8 20 10 C20 12 18.3 14 15 14 L9 14 L15.5 14 C19 14 21 16 21 18 C21 20 19 22 15.5 22 L9 22"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                            fill="none" />
+                    </svg>
+                </a>
+                <button id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#about">about me</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="" style="text-decoration: line-through;">contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-glow"></div>
+        <h1 id="hero-name">Benedek</h1>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="content-section">
+        <div class="section-grid">
+            <div class="section-image reveal-left">
+                <div class="image-placeholder"></div>
+            </div>
+            <div class="section-text reveal-right">
+                <h2><a href="#about">about me <span class="arrow"></span></a></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi libero arcu, ornare in tristique sit
+                    amet, ullamcorper vel odio. Praesent consectetur ac sit amet rhoncus dapibus. Nam aliquet vehicula
+                    augue vitae eleifend. In efficitur mi ligula, sed tempus turpis commodo quis. Sed dictum augue sed
+                    leo lacinia blandit. Vivamus dictum turpis at vivit aliquet tempor. Nulla a tortor quie dui dapibus
+                    convallis ac nec odio. Nulla sit amet augue. Nam sapien tellus, vulputate eget tempus vitae, porta
+                    molestie turpis. Aliquam ut auctor lacus.</p>
             </div>
         </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-section projects-section">
+
+        <!-- ========== PROJECT START ========== -->
+        <div class="project-item">
+            <a href="https://bbenii1.github.io/ogtracker-flash/" target="_blank" class="project-preview reveal-left">
+                <img src="images/OG-firmware-flasher.png" alt="OG Firmware Flasher" class="project-preview-img">
+                <div class="project-preview-overlay">
+                    <div class="project-preview-info">
+                        <h3>OG Firmware Flasher</h3>
+                        <p>A custom Firmware Flasher for OG trackers.</p>
+                    </div>
+                    <span class="project-arrow">
+                        <img src="images/arrow_outward.svg" alt="arrow">
+                    </span>
+                </div>
+            </a>
+            <div class="project-text reveal-right">
+                <h2>A web based firmware flasher</h2>
+                <p>I have created a web based firmware flasher for OG trackers. It is a simple web application that
+                    allows you to flash the firmware of your OG tracker. It is a work in progress and I am always
+                    looking for ways to improve it.</p>
+            </div>
+        </div>
+        <!-- ========== PROJECT END ========== -->
+
+        <!-- ========== PROJECT START ========== -->
+        <div class="project-item">
+            <a href="https://bbenii1.github.io/ogtracker-flash/" target="_blank" class="project-preview reveal-left">
+                <img src="images/OG-firmware-flasher.png" alt="vmi más" class="project-preview-img">
+                <div class="project-preview-overlay">
+                    <div class="project-preview-info">
+                        <h3>vmi más</h3>
+                        <p>A custom Firmware Flasher for OG trackers.</p>
+                    </div>
+                    <span class="project-arrow">
+                        <img src="images/arrow_outward.svg" alt="arrow">
+                    </span>
+                </div>
+            </a>
+            <div class="project-text reveal-right">
+                <h2>Afdsafdsar</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit natus, numquam dolore suscipit incidunt
+                    temporibus officia laborum at. Cumque, veniam. Iste voluptates magni quas ducimus molestias iusto ad
+                    enim, maxime, quaerat praesentium deleniti modi, placeat natus qui. Sunt voluptates optio itaque
+                    fuga commodi quisquam, magni quos accusamus temporibus minus, molestiae voluptatem in omnis eius
+                    veniam. Dolorem amet officia id architecto culpa sequi quis, animi eligendi dolorum quas voluptates
+                    ad qui expedita rerum ratione corrupti consectetur incidunt odio esse veritatis ipsam maxime.
+                    Corporis dignissimos repellendus eaque, necessitatibus libero porro pariatur rem consequatur saepe
+                    velit quae sapiente eum. Obcaecati quia sequi error?</p>
+            </div>
+        </div>
+        <!-- ========== PROJECT END ========== -->
+
+    </section>
+
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="content-section">
+        <div class="section-grid">
+            <div class="section-image reveal-left">
+                <div class="image-placeholder"></div>
+            </div>
+            <div class="section-text reveal-right">
+                <h2><a href="#contact">contact me <span class="arrow">&#8599;</span></a></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi libero arcu, ornare in tristique sit
+                    amet, ullamcorper vel odio. Praesent consectetur ac sit amet rhoncus dapibus. Nam aliquet vehicula
+                    augue vitae eleifend. In efficitur mi ligula, sed tempus turpis commodo quis. Sed dictum augue sed
+                    leo lacinia blandit.</p>
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/szlonkai_benedek/" target="_blank">Instagram <span
+                            class="arrow">&#8599;</span></a>
+                    <a href="https://github.com/Bbenii1" target="_blank">GitHub <span class="arrow">&#8599;</span></a>
+                    <a href="https://discordapp.com/users/679768126384373847" target="_blank">Discord <span
+                            class="arrow">&#8599;</span></a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Szlonkai Benedek</p>
     </footer>
-    <div id=""></div>
+
 </body>
 </html>
