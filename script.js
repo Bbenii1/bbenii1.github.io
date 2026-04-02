@@ -11,9 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Opening Overlay – remove after animation
   // ===========================
   const overlay = document.getElementById('opening-overlay');
+  overlay.classList = 'opening';
+
   if (overlay) {
     overlay.addEventListener('animationend', () => {
-      overlay.style.display = 'none';
+      // overlay.style.display = 'none';
+      overlay.removeAttribute('class');
     });
   }
 
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const span = document.createElement('span');
       span.classList.add('letter');
       span.textContent = char === ' ' ? '\u00A0' : char;
-      span.style.animationDelay = `${1.2 + i * 0.08}s`;
+      span.style.animationDelay = `${1.4 + i * 0.08}s`;
       heroName.appendChild(span);
     });
   }

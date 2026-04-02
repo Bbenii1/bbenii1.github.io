@@ -45,7 +45,7 @@ body {
 
 /* Parallax-ready section elements */
 .section-grid>*,
-.project-item>* {
+.projects-grid>* {
   will-change: transform;
   transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
   transform-style: preserve-3d;
@@ -60,26 +60,28 @@ ul {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 /* ===========================
    Opening Overlay
    =========================== */
 #opening-overlay {
+  display: none;
+  transform: scaleY(1.1);
   position: fixed;
   inset: 0;
   background: var(--overlay-bg);
   z-index: 9999;
   transform-origin: top center;
-  animation: overlaySlide 1s cubic-bezier(0.76, 0, 0.24, 1) 0.4s forwards;
+  animation: overlaySlide 1s cubic-bezier(0.72, 0, 0.24, 1) 0.75s forwards;
+  clip-path: ellipse(100% 60% at 50% 40%);
+}
+
+.opening {
+  display: block !important;
 }
 
 @keyframes overlaySlide {
   0% {
-    transform: scaleY(1);
+    transform: scaleY(1.1);
   }
 
   100% {
@@ -263,7 +265,7 @@ img {
   padding: 10rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  height: 75vh;
+  height: 100vh;
   align-content: center;
 }
 
@@ -278,13 +280,18 @@ img {
   grid-template-columns: 1fr 1.4fr;
 }
 
-/* Image Placeholders */
-.image-placeholder {
+img {
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.profile-img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: var(--placeholder-bg);
-  border-radius: 16px;
   border: 1px solid var(--border);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 /* ===========================
@@ -292,76 +299,101 @@ img {
    =========================== */
 .projects-section {
   height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  max-width: 60vw;
 }
 
-.project-item {
+.projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 3rem;
-  align-items: center;
-  min-height: 80vh;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 /* ===========================
-   Project Preview (Linked Image Box)
+   Project Card
    =========================== */
-.project-preview {
+.project-card {
   position: relative;
   display: block;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--card-bg);
   aspect-ratio: 4 / 3;
+  background-color: var(--placeholder-bg);
+  border: 1px solid var(--border);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.project-preview-img {
+.project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 1.1s 0.15s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.project-preview:hover .project-preview-img {
-  transform: scale(1.03);
+.project-card:hover img {
+  transform: scale(1.05);
 }
 
-/* Overlay at bottom of preview */
-.project-preview-overlay {
+/* Overlay — always at the bottom */
+.project-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.2rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  padding: 1.2rem 1.4rem;
+  
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  pointer-events: none;
 }
 
-.project-preview-info {
+.project-overlay-content {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  width: 70%;
+  gap: 0.2rem;
+  width: 75%;
 }
 
-.project-preview-overlay h3 {
-  font-size: 1rem;
+.project-overlay h3 {
+  font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
 }
 
-.project-preview-overlay p {
-  font-size: 0.7rem;
-  opacity: 0.85;
-  margin-bottom: 0.4rem;
-  line-height: 1.4;
+/* Description — hidden by default, revealed on hover */
+.project-description {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1.7s 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: 0;
+}
+
+.project-card:hover .project-description {
+  opacity: 1;
+  max-height: 120px;
+}
+
+.project-opacity-layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  transition: all 1.5s 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, background-color;
+}
+
+.project-card:hover .project-opacity-layer {
+  background-color: #000000;
+  opacity: 0.35;
 }
 
 /* Animated arrow in bottom right */
@@ -379,26 +411,13 @@ img {
   width: 100%;
   height: 100%;
   filter: brightness(0) invert(1);
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
-.project-preview:hover .project-arrow {
+.project-card:hover .project-arrow {
   transform: translate(3px, -3px);
-}
-
-/* Project Text (next to preview) */
-.project-text h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  margin-bottom: 1.2rem;
-  color: var(--text-primary);
-}
-
-.project-text p {
-  font-size: 0.82rem;
-  line-height: 1.75;
-  color: var(--text-secondary);
-  max-width: 520px;
 }
 
 /* ===========================
@@ -433,6 +452,24 @@ img {
   line-height: 1.75;
   color: var(--text-secondary);
   max-width: 520px;
+}
+
+.skill {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  margin: 0.2rem;
+  border-radius: 20px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  font-size: 0.7rem;
+  font-weight: 500;
+  transition: all 0.325s 0.075s ease;
+}
+
+.skill:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 /* Contact Links */
@@ -522,7 +559,8 @@ footer {
 
   #navbar {
     border-radius: 28px;
-    overflow: hidden; /* critical */
+    overflow: hidden;
+    /* critical */
     transition: border-radius 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -555,7 +593,8 @@ footer {
 
   /* Expanded state */
   #nav-links.open {
-    max-height: 300px; /* large enough to fit links */
+    max-height: 300px;
+    /* large enough to fit links */
     opacity: 1;
     margin-top: 0.75rem;
     text-align: center;
@@ -586,29 +625,29 @@ footer {
   }
 
   .section-grid,
-  .section-grid.reverse,
-  .project-item {
+  .section-grid.reverse {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .project-item {
-    min-height: auto;
-    padding: 3rem 0;
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .section-text h2,
-  .project-text h2 {
+  .section-text h2 {
     font-size: 1.25rem;
   }
 
-  .section-text p,
-  .project-text p {
+  .section-text p {
     font-size: 0.8rem;
   }
 
-  .projects-section {
-    gap: 2rem;
+  /* Show description on mobile (no hover) */
+  .project-description {
+    opacity: 0.85;
+    max-height: 120px;
+    margin-top: 0.3rem;
   }
 
   /* Reveal — slide from bottom on mobile */
@@ -641,4 +680,18 @@ footer {
   .content-section {
     padding: 2.5rem 1rem;
   }
+}
+
+@keyframes overlaySlideClose {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1.1);
+  }
+}
+
+@view-transition {
+  navigation: auto;
 }
