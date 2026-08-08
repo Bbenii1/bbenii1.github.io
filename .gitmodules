@@ -1,3 +1,6 @@
 [submodule "ogtracker-flash"]
 	path = ogtracker-flash
 	url = https://github.com/Bbenii1/OG-Star-Tracker-Firmware-Flasher.git
+[submodule "polar-align"]
+	path = polar-align
+	url = https://github.com/Bbenii1/polar-align-pwa.git
